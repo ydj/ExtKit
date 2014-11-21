@@ -13,6 +13,9 @@
 		5C54B14F1A1EF9DE003B3030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C54B14D1A1EF9DE003B3030 /* Main.storyboard */; };
 		5C54B1511A1EF9DE003B3030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C54B1501A1EF9DE003B3030 /* Images.xcassets */; };
 		5C54B1541A1EF9DE003B3030 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C54B1521A1EF9DE003B3030 /* LaunchScreen.xib */; };
+		5C54B16B1A1EFAB1003B3030 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B16A1A1EFAB1003B3030 /* libz.dylib */; };
+		5C54B16D1A1EFAB6003B3030 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B16C1A1EFAB6003B3030 /* ImageIO.framework */; };
+		5C54B16F1A1EFABB003B3030 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B16E1A1EFABB003B3030 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		5C54B14E1A1EF9DE003B3030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C54B1501A1EF9DE003B3030 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C54B1531A1EF9DE003B3030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5C54B16A1A1EFAB1003B3030 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5C54B16C1A1EFAB6003B3030 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		5C54B16E1A1EFABB003B3030 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C54B16F1A1EFABB003B3030 /* Security.framework in Frameworks */,
+				5C54B16D1A1EFAB6003B3030 /* ImageIO.framework in Frameworks */,
+				5C54B16B1A1EFAB1003B3030 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				5C54B1421A1EF9DE003B3030 /* ExtSDKDemo */,
+				5C54B1691A1EFA97003B3030 /* Frameworks */,
 				5C54B1411A1EF9DE003B3030 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +87,16 @@
 				5C54B1451A1EF9DE003B3030 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C54B1691A1EFA97003B3030 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C54B16E1A1EFABB003B3030 /* Security.framework */,
+				5C54B16C1A1EFAB6003B3030 /* ImageIO.framework */,
+				5C54B16A1A1EFAB1003B3030 /* libz.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +314,7 @@
 				5C54B1651A1EF9DF003B3030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
