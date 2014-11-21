@@ -13,18 +13,10 @@
 		5C54B1161A1EF900003B3030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C54B1141A1EF900003B3030 /* Main.storyboard */; };
 		5C54B1181A1EF900003B3030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C54B1171A1EF900003B3030 /* Images.xcassets */; };
 		5C54B11B1A1EF900003B3030 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C54B1191A1EF900003B3030 /* LaunchScreen.xib */; };
-		5C54B1271A1EF900003B3030 /* ExtSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1261A1EF900003B3030 /* ExtSDKTests.m */; };
+		5C54B1321A1EF928003B3030 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B1311A1EF928003B3030 /* ImageIO.framework */; };
+		5C54B1341A1EF92D003B3030 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B1331A1EF92D003B3030 /* Security.framework */; };
+		5C54B1361A1EF932003B3030 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B1351A1EF932003B3030 /* libz.dylib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5C54B1211A1EF900003B3030 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5C54B0FF1A1EF900003B3030 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C54B1061A1EF900003B3030;
-			remoteInfo = ExtSDK;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5C54B1071A1EF900003B3030 /* ExtSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,9 +29,9 @@
 		5C54B1151A1EF900003B3030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C54B1171A1EF900003B3030 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C54B11A1A1EF900003B3030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5C54B1201A1EF900003B3030 /* ExtSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C54B1251A1EF900003B3030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C54B1261A1EF900003B3030 /* ExtSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtSDKTests.m; sourceTree = "<group>"; };
+		5C54B1311A1EF928003B3030 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		5C54B1331A1EF92D003B3030 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5C54B1351A1EF932003B3030 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C54B11D1A1EF900003B3030 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5C54B1361A1EF932003B3030 /* libz.dylib in Frameworks */,
+				5C54B1341A1EF92D003B3030 /* Security.framework in Frameworks */,
+				5C54B1321A1EF928003B3030 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				5C54B1091A1EF900003B3030 /* ExtSDK */,
-				5C54B1231A1EF900003B3030 /* ExtSDKTests */,
+				5C54B1301A1EF919003B3030 /* Frameworks */,
 				5C54B1081A1EF900003B3030 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				5C54B1071A1EF900003B3030 /* ExtSDK.app */,
-				5C54B1201A1EF900003B3030 /* ExtSDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,21 +89,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5C54B1231A1EF900003B3030 /* ExtSDKTests */ = {
+		5C54B1301A1EF919003B3030 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C54B1261A1EF900003B3030 /* ExtSDKTests.m */,
-				5C54B1241A1EF900003B3030 /* Supporting Files */,
+				5C54B1351A1EF932003B3030 /* libz.dylib */,
+				5C54B1331A1EF92D003B3030 /* Security.framework */,
+				5C54B1311A1EF928003B3030 /* ImageIO.framework */,
 			);
-			path = ExtSDKTests;
-			sourceTree = "<group>";
-		};
-		5C54B1241A1EF900003B3030 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5C54B1251A1EF900003B3030 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +119,6 @@
 			productReference = 5C54B1071A1EF900003B3030 /* ExtSDK.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5C54B11F1A1EF900003B3030 /* ExtSDKTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5C54B12D1A1EF900003B3030 /* Build configuration list for PBXNativeTarget "ExtSDKTests" */;
-			buildPhases = (
-				5C54B11C1A1EF900003B3030 /* Sources */,
-				5C54B11D1A1EF900003B3030 /* Frameworks */,
-				5C54B11E1A1EF900003B3030 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5C54B1221A1EF900003B3030 /* PBXTargetDependency */,
-			);
-			name = ExtSDKTests;
-			productName = ExtSDKTests;
-			productReference = 5C54B1201A1EF900003B3030 /* ExtSDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +130,6 @@
 				TargetAttributes = {
 					5C54B1061A1EF900003B3030 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					5C54B11F1A1EF900003B3030 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 5C54B1061A1EF900003B3030;
 					};
 				};
 			};
@@ -189,7 +147,6 @@
 			projectRoot = "";
 			targets = (
 				5C54B1061A1EF900003B3030 /* ExtSDK */,
-				5C54B11F1A1EF900003B3030 /* ExtSDKTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,13 +159,6 @@
 				5C54B1161A1EF900003B3030 /* Main.storyboard in Resources */,
 				5C54B11B1A1EF900003B3030 /* LaunchScreen.xib in Resources */,
 				5C54B1181A1EF900003B3030 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C54B11E1A1EF900003B3030 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,23 +175,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C54B11C1A1EF900003B3030 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5C54B1271A1EF900003B3030 /* ExtSDKTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5C54B1221A1EF900003B3030 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5C54B1061A1EF900003B3030 /* ExtSDK */;
-			targetProxy = 5C54B1211A1EF900003B3030 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5C54B1141A1EF900003B3030 /* Main.storyboard */ = {
@@ -361,40 +295,6 @@
 			};
 			name = Release;
 		};
-		5C54B12E1A1EF900003B3030 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ExtSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExtSDK.app/ExtSDK";
-			};
-			name = Debug;
-		};
-		5C54B12F1A1EF900003B3030 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ExtSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExtSDK.app/ExtSDK";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,14 +312,6 @@
 			buildConfigurations = (
 				5C54B12B1A1EF900003B3030 /* Debug */,
 				5C54B12C1A1EF900003B3030 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		5C54B12D1A1EF900003B3030 /* Build configuration list for PBXNativeTarget "ExtSDKTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5C54B12E1A1EF900003B3030 /* Debug */,
-				5C54B12F1A1EF900003B3030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
