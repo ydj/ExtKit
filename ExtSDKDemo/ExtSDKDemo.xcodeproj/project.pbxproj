@@ -217,7 +217,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = nextdj;
+				ORGANIZATIONNAME = YDJ;
 				TargetAttributes = {
 					5C54B13F1A1EF9DE003B3030 = {
 						CreatedOnToolsVersion = 6.1;
