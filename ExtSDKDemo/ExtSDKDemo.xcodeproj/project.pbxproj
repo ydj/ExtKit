@@ -16,6 +16,20 @@
 		5C54B16B1A1EFAB1003B3030 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B16A1A1EFAB1003B3030 /* libz.dylib */; };
 		5C54B16D1A1EFAB6003B3030 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B16C1A1EFAB6003B3030 /* ImageIO.framework */; };
 		5C54B16F1A1EFABB003B3030 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B16E1A1EFABB003B3030 /* Security.framework */; };
+		5C54B1901A1EFAF6003B3030 /* HelperExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1741A1EFAF6003B3030 /* HelperExt.m */; };
+		5C54B1911A1EFAF6003B3030 /* LanguageExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1761A1EFAF6003B3030 /* LanguageExt.m */; };
+		5C54B1921A1EFAF6003B3030 /* NSArray+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1781A1EFAF6003B3030 /* NSArray+ExtensionExt.m */; };
+		5C54B1931A1EFAF6003B3030 /* NSData+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B17A1A1EFAF6003B3030 /* NSData+ExtensionExt.m */; };
+		5C54B1941A1EFAF6003B3030 /* NSDate+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B17C1A1EFAF6003B3030 /* NSDate+ExtensionExt.m */; };
+		5C54B1951A1EFAF6003B3030 /* NSDictionary+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B17E1A1EFAF6003B3030 /* NSDictionary+ExtensionExt.m */; };
+		5C54B1961A1EFAF6003B3030 /* NSObject+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1801A1EFAF6003B3030 /* NSObject+ExtensionExt.m */; };
+		5C54B1971A1EFAF6003B3030 /* NSString+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1821A1EFAF6003B3030 /* NSString+ExtensionExt.m */; };
+		5C54B1981A1EFAF6003B3030 /* UIApplication+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1841A1EFAF6003B3030 /* UIApplication+ExtensionExt.m */; };
+		5C54B1991A1EFAF6003B3030 /* UIColor+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1861A1EFAF6003B3030 /* UIColor+ExtensionExt.m */; };
+		5C54B19A1A1EFAF6003B3030 /* UIDevice+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1881A1EFAF6003B3030 /* UIDevice+ExtensionExt.m */; };
+		5C54B19B1A1EFAF6003B3030 /* UIImage+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B18A1A1EFAF6003B3030 /* UIImage+ExtensionExt.m */; };
+		5C54B19C1A1EFAF6003B3030 /* UILabel+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B18C1A1EFAF6003B3030 /* UILabel+ExtensionExt.m */; };
+		5C54B19D1A1EFAF6003B3030 /* UIView+ExtensionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B18E1A1EFAF6003B3030 /* UIView+ExtensionExt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +46,36 @@
 		5C54B16A1A1EFAB1003B3030 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5C54B16C1A1EFAB6003B3030 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		5C54B16E1A1EFABB003B3030 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5C54B1721A1EFAF6003B3030 /* ExtMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtMacros.h; sourceTree = "<group>"; };
+		5C54B1731A1EFAF6003B3030 /* HelperExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperExt.h; sourceTree = "<group>"; };
+		5C54B1741A1EFAF6003B3030 /* HelperExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperExt.m; sourceTree = "<group>"; };
+		5C54B1751A1EFAF6003B3030 /* LanguageExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageExt.h; sourceTree = "<group>"; };
+		5C54B1761A1EFAF6003B3030 /* LanguageExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageExt.m; sourceTree = "<group>"; };
+		5C54B1771A1EFAF6003B3030 /* NSArray+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B1781A1EFAF6003B3030 /* NSArray+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B1791A1EFAF6003B3030 /* NSData+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B17A1A1EFAF6003B3030 /* NSData+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B17B1A1EFAF6003B3030 /* NSDate+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B17C1A1EFAF6003B3030 /* NSDate+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B17D1A1EFAF6003B3030 /* NSDictionary+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B17E1A1EFAF6003B3030 /* NSDictionary+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B17F1A1EFAF6003B3030 /* NSObject+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B1801A1EFAF6003B3030 /* NSObject+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B1811A1EFAF6003B3030 /* NSString+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B1821A1EFAF6003B3030 /* NSString+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B1831A1EFAF6003B3030 /* UIApplication+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B1841A1EFAF6003B3030 /* UIApplication+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B1851A1EFAF6003B3030 /* UIColor+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B1861A1EFAF6003B3030 /* UIColor+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B1871A1EFAF6003B3030 /* UIDevice+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B1881A1EFAF6003B3030 /* UIDevice+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B1891A1EFAF6003B3030 /* UIImage+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B18A1A1EFAF6003B3030 /* UIImage+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B18B1A1EFAF6003B3030 /* UILabel+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B18C1A1EFAF6003B3030 /* UILabel+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B18D1A1EFAF6003B3030 /* UIView+ExtensionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ExtensionExt.h"; sourceTree = "<group>"; };
+		5C54B18E1A1EFAF6003B3030 /* UIView+ExtensionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ExtensionExt.m"; sourceTree = "<group>"; };
+		5C54B18F1A1EFAF6003B3030 /* ExtSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtSDK.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +112,7 @@
 		5C54B1421A1EF9DE003B3030 /* ExtSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5C54B1701A1EFAF6003B3030 /* ExtSDK */,
 				5C54B1471A1EF9DE003B3030 /* AppDelegate.h */,
 				5C54B1481A1EF9DE003B3030 /* AppDelegate.m */,
 				5C54B14A1A1EF9DE003B3030 /* ViewController.h */,
@@ -97,6 +142,52 @@
 				5C54B16A1A1EFAB1003B3030 /* libz.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C54B1701A1EFAF6003B3030 /* ExtSDK */ = {
+			isa = PBXGroup;
+			children = (
+				5C54B1711A1EFAF6003B3030 /* ExtSDK */,
+				5C54B18F1A1EFAF6003B3030 /* ExtSDK.h */,
+			);
+			name = ExtSDK;
+			path = ../../ExtSDK;
+			sourceTree = "<group>";
+		};
+		5C54B1711A1EFAF6003B3030 /* ExtSDK */ = {
+			isa = PBXGroup;
+			children = (
+				5C54B1721A1EFAF6003B3030 /* ExtMacros.h */,
+				5C54B1731A1EFAF6003B3030 /* HelperExt.h */,
+				5C54B1741A1EFAF6003B3030 /* HelperExt.m */,
+				5C54B1751A1EFAF6003B3030 /* LanguageExt.h */,
+				5C54B1761A1EFAF6003B3030 /* LanguageExt.m */,
+				5C54B1771A1EFAF6003B3030 /* NSArray+ExtensionExt.h */,
+				5C54B1781A1EFAF6003B3030 /* NSArray+ExtensionExt.m */,
+				5C54B1791A1EFAF6003B3030 /* NSData+ExtensionExt.h */,
+				5C54B17A1A1EFAF6003B3030 /* NSData+ExtensionExt.m */,
+				5C54B17B1A1EFAF6003B3030 /* NSDate+ExtensionExt.h */,
+				5C54B17C1A1EFAF6003B3030 /* NSDate+ExtensionExt.m */,
+				5C54B17D1A1EFAF6003B3030 /* NSDictionary+ExtensionExt.h */,
+				5C54B17E1A1EFAF6003B3030 /* NSDictionary+ExtensionExt.m */,
+				5C54B17F1A1EFAF6003B3030 /* NSObject+ExtensionExt.h */,
+				5C54B1801A1EFAF6003B3030 /* NSObject+ExtensionExt.m */,
+				5C54B1811A1EFAF6003B3030 /* NSString+ExtensionExt.h */,
+				5C54B1821A1EFAF6003B3030 /* NSString+ExtensionExt.m */,
+				5C54B1831A1EFAF6003B3030 /* UIApplication+ExtensionExt.h */,
+				5C54B1841A1EFAF6003B3030 /* UIApplication+ExtensionExt.m */,
+				5C54B1851A1EFAF6003B3030 /* UIColor+ExtensionExt.h */,
+				5C54B1861A1EFAF6003B3030 /* UIColor+ExtensionExt.m */,
+				5C54B1871A1EFAF6003B3030 /* UIDevice+ExtensionExt.h */,
+				5C54B1881A1EFAF6003B3030 /* UIDevice+ExtensionExt.m */,
+				5C54B1891A1EFAF6003B3030 /* UIImage+ExtensionExt.h */,
+				5C54B18A1A1EFAF6003B3030 /* UIImage+ExtensionExt.m */,
+				5C54B18B1A1EFAF6003B3030 /* UILabel+ExtensionExt.h */,
+				5C54B18C1A1EFAF6003B3030 /* UILabel+ExtensionExt.m */,
+				5C54B18D1A1EFAF6003B3030 /* UIView+ExtensionExt.h */,
+				5C54B18E1A1EFAF6003B3030 /* UIView+ExtensionExt.m */,
+			);
+			path = ExtSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +260,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C54B1941A1EFAF6003B3030 /* NSDate+ExtensionExt.m in Sources */,
+				5C54B1961A1EFAF6003B3030 /* NSObject+ExtensionExt.m in Sources */,
+				5C54B1951A1EFAF6003B3030 /* NSDictionary+ExtensionExt.m in Sources */,
+				5C54B19B1A1EFAF6003B3030 /* UIImage+ExtensionExt.m in Sources */,
+				5C54B1921A1EFAF6003B3030 /* NSArray+ExtensionExt.m in Sources */,
+				5C54B1931A1EFAF6003B3030 /* NSData+ExtensionExt.m in Sources */,
 				5C54B14C1A1EF9DE003B3030 /* ViewController.m in Sources */,
+				5C54B1981A1EFAF6003B3030 /* UIApplication+ExtensionExt.m in Sources */,
+				5C54B19C1A1EFAF6003B3030 /* UILabel+ExtensionExt.m in Sources */,
+				5C54B19A1A1EFAF6003B3030 /* UIDevice+ExtensionExt.m in Sources */,
+				5C54B1971A1EFAF6003B3030 /* NSString+ExtensionExt.m in Sources */,
 				5C54B1491A1EF9DE003B3030 /* AppDelegate.m in Sources */,
+				5C54B1991A1EFAF6003B3030 /* UIColor+ExtensionExt.m in Sources */,
 				5C54B1461A1EF9DE003B3030 /* main.m in Sources */,
+				5C54B19D1A1EFAF6003B3030 /* UIView+ExtensionExt.m in Sources */,
+				5C54B1901A1EFAF6003B3030 /* HelperExt.m in Sources */,
+				5C54B1911A1EFAF6003B3030 /* LanguageExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
