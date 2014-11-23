@@ -1,7 +1,7 @@
-ExtSDK
+ExtKit
 ======
 
-`ExtSDK`收集了一些平时常用的功能，提供开发效率
+`ExtKit`收集了一些平时常用的功能，提供开发效率
 
 
 ##简单介绍
@@ -82,4 +82,4 @@ ExtSDK
 ```
 
 ####协议
-ExtSDK 被许可在 MIT 协议下使用。查阅 LICENSE 文件来获得更多信息。
+ExtKit 被许可在 MIT 协议下使用。查阅 LICENSE 文件来获得更多信息。
