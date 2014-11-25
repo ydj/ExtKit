@@ -48,42 +48,24 @@
         return NO;
     }
     
-    BOOL isResult=YES;
-    
-    NSFileManager * file=[NSFileManager defaultManager];
-    
-    NSArray * array=[path_ componentsSeparatedByString:@"/"];
-    
-    if ([array count]==0) {
-        isResult=NO;
-        return isResult;
+    NSString * extPath=[path_ stringByDeletingLastPathComponent];
+    NSString * docName=[path_ lastPathComponent];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:extPath]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:extPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     
-    NSString * objPath=@"/";
     
-    for (int i=0; i<[array count]-1; i++) {
-        NSString * name=[array objectAtIndex:i];
-        NSString * temp=[objPath stringByAppendingPathComponent:name];
-        objPath=[NSString stringWithFormat:@"%@",temp];
-        if (![file fileExistsAtPath:temp]) {
-           isResult=[file createDirectoryAtPath:temp withIntermediateDirectories:YES attributes:nil error:nil];
-            if (isResult==NO) {
-                return isResult;
-            }
-        }
-    }
-    NSString * docName=[array lastObject];
-    NSString * lastpath=[objPath stringByAppendingPathComponent:docName];
     NSMutableData * data=[NSMutableData data];
     NSKeyedArchiver * archiver=[[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     [archiver encodeObject:obj
                     forKey:[docName md5DHexDigestString_Ext]];
     [archiver finishEncoding];
     
+    BOOL isResult=NO;
+
     if ([data respondsToSelector:@selector(writeToFile:atomically:)]) {
-        isResult=[data writeToFile:lastpath atomically:YES];
+        isResult=[data writeToFile:path_ atomically:YES];
     }
-    
     
     return isResult;
     
@@ -110,64 +92,22 @@
 
 
 -(void)writeToFile_Ext:(NSString *)path data:(NSData *)data
-{//下载的数据写到本地
+{//数据写到本地
     if (path==nil||data==nil) {
         return ;
     }
     
-    NSString * imagePath=@"/";
-    NSFileManager * file=[NSFileManager defaultManager];
+    NSString * extPath=[path stringByDeletingLastPathComponent];
     
-    NSArray * array=[path componentsSeparatedByString:@"/"];
-    
-    for (int i=0; i<[array count]-1; i++) {
-        NSString * name=[array objectAtIndex:i];
-        NSString * temp=[imagePath stringByAppendingPathComponent:name];
-        imagePath=[NSString stringWithFormat:@"%@",temp];
-        if (![file fileExistsAtPath:temp]) {
-            [file createDirectoryAtPath:temp withIntermediateDirectories:YES attributes:nil error:nil];
-        }
+    if (![[NSFileManager defaultManager] fileExistsAtPath:extPath]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:extPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    NSString * lastPath=[imagePath stringByAppendingPathComponent:[array lastObject]];
+    
     if ([data respondsToSelector:@selector(writeToFile:atomically:)]) {
-        [data writeToFile:lastPath atomically:YES];
+        [data writeToFile:path atomically:YES];
     }
+
 }
-
-
-- (BOOL)createDirectoryPath_Ext:(NSString *)path withAttribute:(NSDictionary *)att error:(NSError **)error
-{
-    if (path==nil || path.length==0) {
-        return NO;
-    }
-    
-    
-    BOOL result=YES;
-    
-    NSString * imagePath=@"/";
-    NSFileManager * file=[NSFileManager defaultManager];
-    
-    NSArray * array=[path componentsSeparatedByString:@"/"];
-    
-    for (int i=0; i<[array count]; i++) {
-        NSString * name=[array objectAtIndex:i];
-        NSString * temp=[imagePath stringByAppendingPathComponent:name];
-        imagePath=[NSString stringWithFormat:@"%@",temp];
-        if (![file fileExistsAtPath:temp]) {
-            NSDictionary * dic=nil;
-            if (i==[array count]-1) {
-                dic=att;
-            }
-           result=[file createDirectoryAtPath:temp withIntermediateDirectories:YES attributes:dic error:error];
-            if (result==NO) {
-                return NO;
-            }
-        }
-    }
-    
-    return result;
-}
-
 
 
 

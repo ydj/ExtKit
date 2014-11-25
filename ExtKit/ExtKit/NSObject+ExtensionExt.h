@@ -59,21 +59,6 @@
 
 
 /**
- *
- * @brief 创建文件夹
- * 
- * @param path 文件夹的路径,e.g：/users文件夹/doc文件夹
- * @param att 最后文件夹的属性
- * @param error 失败的指针地址
- *
- * @return 创建的成功还是失败
- *
- */
-- (BOOL)createDirectoryPath_Ext:(NSString *)path withAttribute:(NSDictionary *)att error:(NSError **)error;
-
-
-
-/**
  * 对象序列成字典
  *
  * @param obj 需要序列化的对象
