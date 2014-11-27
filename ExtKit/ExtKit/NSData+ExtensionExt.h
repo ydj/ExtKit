@@ -238,7 +238,7 @@
  *	@param options   加密的模块类型 PKCS7/ECB
  *	@return  加解密后的数据
  */
--(NSData *)cipherData_Ext:(NSData *)edata withkey:(NSData *)kData withIV:(void *)iv_byte  Operation:(CCOperation)operation Algorithm:(CCAlgorithm)algorithm keySize:(uint8_t)keySize options:(CCOptions)options;
++(NSData *)cipherData_Ext:(NSData *)edata withkey:(NSData *)kData withIV:(void *)iv_byte  Operation:(CCOperation)operation Algorithm:(CCAlgorithm)algorithm keySize:(uint8_t)keySize options:(CCOptions)options;
 
 
 /**

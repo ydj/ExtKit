@@ -328,9 +328,9 @@
 }
 
 
--(NSData *)cipherData_Ext:(NSData *)edata withkey:(NSData *)kData withIV:(void *)iv_byte  Operation:(CCOperation)operation Algorithm:(CCAlgorithm)algorithm keySize:(uint8_t)keySize options:(CCOptions)options
++(NSData *)cipherData_Ext:(NSData *)edata withkey:(NSData *)kData withIV:(void *)iv_byte  Operation:(CCOperation)operation Algorithm:(CCAlgorithm)algorithm keySize:(uint8_t)keySize options:(CCOptions)options
 {
-    return [self cipherData:edata withkey:kData withIV:iv_byte Operation:operation Algorithm:algorithm keySize:keySize options:options];
+    return [[self class] cipherData:edata withkey:kData withIV:iv_byte Operation:operation Algorithm:algorithm keySize:keySize options:options];
 }
 
 
