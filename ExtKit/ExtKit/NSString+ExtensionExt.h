@@ -106,6 +106,19 @@
 - (NSString *)urlDecode_Ext:(NSStringEncoding)decodeing;
 
 /**
+ *	字符串转为16进制字符串
+ *	@return 转换后得字符串
+ */
+- (NSString *)hexEncode_Ext;
+
+/**
+ *	从16进制字符串转为原字符串
+ *	@return 转换后得字符串
+ */
+- (NSString *)hexDecode_Ext;
+
+
+/**
  * @brief 字符串base64编码
  *
  * @param encoding 需要编码的字符串格式以及返回字符串的格式(UTF-8,GB2313...)

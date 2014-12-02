@@ -204,6 +204,32 @@
     return [outputStr stringByReplacingPercentEscapesUsingEncoding:decodeing];
 }
 
+
+- (NSString *)hexEncode_Ext
+{
+    if (!self) {
+        return nil;
+    }
+    NSData * data=[self dataUsingEncoding:NSUTF8StringEncoding];
+    NSData * eData=[data hexEncode_Ext];
+    
+    __autoreleasing NSString *result=[[NSString alloc] initWithData:eData encoding:NSUTF8StringEncoding];
+    return result;
+    
+}
+
+- (NSString *)hexDecode_Ext
+{
+    if (!self) {
+        return nil;
+    }
+    NSData * data=[self dataUsingEncoding:NSUTF8StringEncoding];
+    NSData * eData=[data hexDecode_Ext];
+    
+    __autoreleasing NSString *result=[[NSString alloc] initWithData:eData encoding:NSUTF8StringEncoding];
+    return result;
+}
+
 /**
  * @brief 字符串base64编码
  *

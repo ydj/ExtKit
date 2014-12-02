@@ -84,6 +84,17 @@
  */
 - (NSData *)dataByUsingHMacSHA1WithKey_Ext:(NSData *)key;
 
+/**
+ *	数据转为16进制
+ *  @return 转换后得数据
+ */
+- (NSData *)hexEncode_Ext;
+
+/**
+ *  从16进制转为原数据
+ *  @return 转换后的数据
+ */
+- (NSData *)hexDecode_Ext;
 
 /**
  * @brief 数据base64编码

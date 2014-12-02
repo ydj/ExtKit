@@ -76,6 +76,8 @@
 	return ( [NSData dataWithBytes: hash length: CC_SHA512_DIGEST_LENGTH] );
 }
 
+
+
 /**
  *	@brief	使用Key进行HMAC-SHA1加密
  *
@@ -94,6 +96,99 @@
     NSData * data=[NSData dataWithBytes:cHMAC length:CC_SHA1_DIGEST_LENGTH];
     return data;
 }
+
+
+
+- (NSData *)_hexEncode:(NSData *)data useLower:(BOOL)isOutputLower
+{
+    if (data.length == 0) { return nil; }
+    
+    static const char HexEncodeCharsLower[] = "0123456789abcdef";
+    static const char HexEncodeChars[] = "0123456789ABCDEF";
+    char *resultData;
+    
+    unsigned long lengthResutData=[data length]*2+1;
+    // malloc result data
+    resultData = malloc(lengthResutData);
+    // convert imgData(NSData) to char[]
+    unsigned char *sourceData = ((unsigned char *)[data bytes]);
+    NSUInteger length = [data length];
+    
+    if (isOutputLower) {
+        for (NSUInteger index = 0; index < length; index++) {
+            // set result data
+            resultData[index * 2] = HexEncodeCharsLower[(sourceData[index] >> 4)];
+            resultData[index * 2 + 1] = HexEncodeCharsLower[(sourceData[index] % 0x10)];
+        }
+    }
+    else {
+        for (NSUInteger index = 0; index < length; index++) {
+            // set result data
+            resultData[index * 2] = HexEncodeChars[(sourceData[index] >> 4)];
+            resultData[index * 2 + 1] = HexEncodeChars[(sourceData[index] % 0x10)];
+        }
+    }
+    resultData[[data length] * 2] = 0;
+    
+    
+    NSData * result=[NSData dataWithBytes:resultData length:lengthResutData];
+    
+    sourceData = nil;
+    free(resultData);
+    
+    return result;
+}
+
+
+- (NSData *)hexEncode_Ext
+{
+    if(!self){
+        return nil;
+    }
+    return [self _hexEncode:self useLower:YES];
+    
+}
+
+- (NSData *)hexDecode_Ext
+{
+    if (!self || self.length == 0) {
+        return nil;
+    }
+    
+    
+    static const unsigned char HexDecodeChars[] =
+    {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 1, //49
+        2, 3, 4, 5, 6, 7, 8, 9, 0, 0, //59
+        0, 0, 0, 0, 0, 10, 11, 12, 13, 14,
+        15, 0, 0, 0, 0, 0, 0, 0, 0, 0,  //79
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 10, 11, 12,   //99
+        13, 14, 15
+    };
+    
+    const char *source = (char *)[self bytes];
+    // malloc buffer
+    unsigned char *buffer;
+    NSUInteger length = strlen(source) / 2;
+    buffer = malloc(length);
+    for (NSUInteger index = 0; index < length; index++) {
+        buffer[index] = (HexDecodeChars[source[index * 2]] << 4) + (HexDecodeChars[source[index * 2 + 1]]);
+    }
+    NSData *result = [NSData dataWithBytes:buffer length:length];
+    free(buffer);
+    source = nil;
+    
+    return  result;
+    
+    
+}
+
+
 
 
 - (NSData *)base64Encoded_Ext

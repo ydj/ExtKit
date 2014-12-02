@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title=@"hello 世界";
+    self.title=@"hello 你好";
     
     _tableView=[[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     _tableView.delegate=self;
@@ -47,7 +47,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,6 +96,11 @@
         {
             titleString=@"base64";
             detailString=[text base64Encoded_Ext];
+            break;
+        }
+        case 5:{
+            titleString=@"hex";
+            detailString=[text hexEncode_Ext];
             break;
         }
         default:
