@@ -131,6 +131,23 @@
     return data;
 }
 
+
+- (NSString *)urlEncodeAllRecode:(CFStringEncoding)encodeing
+{
+
+    //kCFStringEncodingUTF8
+    // Encode all the reserved characters, per RFC 3986
+    // (<http://www.ietf.org/rfc/rfc3986.txt>)
+    NSString *outputStr = (NSString *)
+    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                            (CFStringRef)self,
+                                            NULL,
+                                            (CFStringRef)@"!*'();:@&=+$,%#[]",
+                                            encodeing));
+    return outputStr;
+    
+}
+
 /**
  * @brief  URL字符串编码
  *
@@ -154,6 +171,8 @@
     return [outputStr autorelease];
      */
 }
+
+
 
 - (NSString *)urlEncodeUTF8_Ext
 {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CB8A5B61A2B67FA0050E26A /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8A5B51A2B67FA0050E26A /* DataViewController.m */; };
 		5CE165E61A2230870037B2D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE165E51A2230870037B2D7 /* main.m */; };
 		5CE165E91A2230870037B2D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE165E81A2230870037B2D7 /* AppDelegate.m */; };
 		5CE165EC1A2230870037B2D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE165EB1A2230870037B2D7 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CB8A5B41A2B67FA0050E26A /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		5CB8A5B51A2B67FA0050E26A /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		5CE165E01A2230870037B2D7 /* ExtKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE165E41A2230870037B2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CE165E51A2230870037B2D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				5CE165E81A2230870037B2D7 /* AppDelegate.m */,
 				5CE165EA1A2230870037B2D7 /* ViewController.h */,
 				5CE165EB1A2230870037B2D7 /* ViewController.m */,
+				5CB8A5B41A2B67FA0050E26A /* DataViewController.h */,
+				5CB8A5B51A2B67FA0050E26A /* DataViewController.m */,
 				5CE165ED1A2230870037B2D7 /* Main.storyboard */,
 				5CE165F01A2230870037B2D7 /* Images.xcassets */,
 				5CE165F21A2230870037B2D7 /* LaunchScreen.xib */,
@@ -264,6 +269,7 @@
 				5CE1662F1A2230A00037B2D7 /* NSObject+ExtensionExt.m in Sources */,
 				5CE1662E1A2230A00037B2D7 /* NSDictionary+ExtensionExt.m in Sources */,
 				5CE166341A2230A00037B2D7 /* UIImage+ExtensionExt.m in Sources */,
+				5CB8A5B61A2B67FA0050E26A /* DataViewController.m in Sources */,
 				5CE1662B1A2230A00037B2D7 /* NSArray+ExtensionExt.m in Sources */,
 				5CE1662C1A2230A00037B2D7 /* NSData+ExtensionExt.m in Sources */,
 				5CE165EC1A2230870037B2D7 /* ViewController.m in Sources */,
@@ -419,6 +425,7 @@
 				5CE166051A2230870037B2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -68,6 +68,13 @@
 
 
 /**
+ *	全部进行url编码 !*'();:@&=+$,%#[]
+ *	@param encodeing 编码格式 kCFStringEncodingUTF8
+ *	@return 编码后的字符串
+ */
+- (NSString *)urlEncodeAllRecode:(CFStringEncoding)encodeing;
+
+/**
  * @brief url编码,使用utf8编码
  *
  * @return 编码后的字符串
