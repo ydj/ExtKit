@@ -238,6 +238,7 @@
 - (id)objectFromJSONData_Ext NS_AVAILABLE(10_7, 5_0);
 
 
+
 /**
  *	加密解密方法
  *	@param edata     需要加密的数据

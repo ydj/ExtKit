@@ -346,7 +346,7 @@
         return nil;
     }
    
-    return [self cipherData:self withkey:keyData withIV:iv_ Operation:kCCEncrypt Algorithm:kCCAlgorithmAES128 keySize:kCCKeySizeAES128 options:kCCOptionPKCS7Padding];
+    return [[self class]cipherData:self withkey:keyData withIV:iv_ Operation:kCCEncrypt Algorithm:kCCAlgorithmAES128 keySize:kCCKeySizeAES128 options:kCCOptionPKCS7Padding];
     
 }
 - (NSData *)dataUsingAES128DecryptWithkey_Ext:(NSData *)keyData withIV:(void *)iv_
@@ -354,7 +354,7 @@
     if (self==nil) {
         return nil;
     }
-    return [self cipherData:self withkey:keyData withIV:iv_ Operation:kCCDecrypt Algorithm:kCCAlgorithmAES128 keySize:kCCKeySizeAES128 options:kCCOptionPKCS7Padding];
+    return [[self class]cipherData:self withkey:keyData withIV:iv_ Operation:kCCDecrypt Algorithm:kCCAlgorithmAES128 keySize:kCCKeySizeAES128 options:kCCOptionPKCS7Padding];
 
 }
 - (NSData *)dataUsingAES256EncryptWithkey_Ext:(NSData *)keyData withIV:(void *)iv_
@@ -364,7 +364,7 @@
         return nil;
     }
     
-    return [self cipherData:self withkey:keyData withIV:iv_ Operation:kCCEncrypt Algorithm:kCCAlgorithmAES128 keySize:kCCKeySizeAES256 options:kCCOptionPKCS7Padding];
+    return [[self class]cipherData:self withkey:keyData withIV:iv_ Operation:kCCEncrypt Algorithm:kCCAlgorithmAES128 keySize:kCCKeySizeAES256 options:kCCOptionPKCS7Padding];
 
 
 }
@@ -375,7 +375,7 @@
         return nil;
     }
     
-    return [self cipherData:self withkey:keyData withIV:iv_ Operation:kCCDecrypt Algorithm:kCCAlgorithmAES128 keySize:kCCKeySizeAES256 options:kCCOptionPKCS7Padding];
+    return [[self class]cipherData:self withkey:keyData withIV:iv_ Operation:kCCDecrypt Algorithm:kCCAlgorithmAES128 keySize:kCCKeySizeAES256 options:kCCOptionPKCS7Padding];
 
     
 }
@@ -390,7 +390,7 @@
         return nil;
     }
     
-    return [self cipherData:self withkey:keyData withIV:iv_ Operation:kCCEncrypt Algorithm:kCCAlgorithm3DES keySize:kCCKeySize3DES options:kCCOptionPKCS7Padding];
+    return [[self class]cipherData:self withkey:keyData withIV:iv_ Operation:kCCEncrypt Algorithm:kCCAlgorithm3DES keySize:kCCKeySize3DES options:kCCOptionPKCS7Padding];
     
 }
 - (NSData *)dataUsing3DESDecryptWithkey_Ext:(NSData *)keyData withIV:(void *)iv_
@@ -399,7 +399,7 @@
     if (self==nil) {
         return nil;
     }
-    return [self cipherData:self withkey:keyData withIV:iv_ Operation:kCCDecrypt Algorithm:kCCAlgorithm3DES keySize:kCCKeySize3DES options:kCCOptionPKCS7Padding];
+    return [[self class]cipherData:self withkey:keyData withIV:iv_ Operation:kCCDecrypt Algorithm:kCCAlgorithm3DES keySize:kCCKeySize3DES options:kCCOptionPKCS7Padding];
 
 }
 
@@ -410,7 +410,7 @@
         return nil;
     }
     
-    return [self cipherData:self withkey:keyData withIV:iv_ Operation:kCCEncrypt Algorithm:kCCAlgorithmDES keySize:kCCKeySizeDES options:kCCOptionPKCS7Padding];
+    return [[self class] cipherData:self withkey:keyData withIV:iv_ Operation:kCCEncrypt Algorithm:kCCAlgorithmDES keySize:kCCKeySizeDES options:kCCOptionPKCS7Padding];
     
 }
 
@@ -419,7 +419,7 @@
     if (self==nil) {
         return nil;
     }
-    return [self cipherData:self withkey:keyData withIV:iv_ Operation:kCCDecrypt Algorithm:kCCAlgorithmDES keySize:kCCKeySizeDES options:kCCOptionPKCS7Padding];
+    return [[self class] cipherData:self withkey:keyData withIV:iv_ Operation:kCCDecrypt Algorithm:kCCAlgorithmDES keySize:kCCKeySizeDES options:kCCOptionPKCS7Padding];
 }
 
 
@@ -429,7 +429,7 @@
 }
 
 
--(NSData *)cipherData:(NSData *)edata withkey:(NSData *)kData withIV:(void *)iv_byte  Operation:(CCOperation)operation Algorithm:(CCAlgorithm)algorithm keySize:(uint8_t)keySize options:(CCOptions)options
++(NSData *)cipherData:(NSData *)edata withkey:(NSData *)kData withIV:(void *)iv_byte  Operation:(CCOperation)operation Algorithm:(CCAlgorithm)algorithm keySize:(uint8_t)keySize options:(CCOptions)options
 {
     
     const void *textBytes = [edata bytes];//需要加密的bytes
