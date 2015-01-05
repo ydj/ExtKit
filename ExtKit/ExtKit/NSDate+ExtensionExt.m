@@ -37,7 +37,7 @@
 {
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setMonth:month];
-    NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSCalendar *calender = [NSDate AZ_currentCalendar];
     NSDate *mDate = [calender dateByAddingComponents:comps toDate:date options:0];
     return mDate;
 }
@@ -46,7 +46,7 @@
 {
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setMonth:month];
-    NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSCalendar *calender = [NSDate AZ_currentCalendar];
     NSDate *mDate = [calender dateByAddingComponents:comps toDate:self options:0];
     return mDate;
 }
@@ -528,7 +528,7 @@
     return [components year];
 }
 - (NSInteger)gregorianYear_Ext {
-    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSCalendar *currentCalendar = [NSDate AZ_currentCalendar];
     NSDateComponents *components = [currentCalendar components:NSCalendarUnitEra | NSCalendarUnitYear fromDate:self];
     return [components year];
 }
