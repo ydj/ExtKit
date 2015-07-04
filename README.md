@@ -3,6 +3,11 @@ ExtKit
 
 `ExtKit`实现了一些平时常用的功能，提供开发效率
 
+```
+platform :ios, '6.0'
+pod 'ExtKit', '~> 0.2'
+
+```
 
 ##简单介绍
 
